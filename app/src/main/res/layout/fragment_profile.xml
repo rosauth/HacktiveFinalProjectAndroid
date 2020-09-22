@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Controller.Fragment.ProfileFragment">
+
+    <RelativeLayout
+        style="@style/loginParent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            style="@style/loginParent"
+            android:layout_marginBottom="@dimen/signup_text_margin_top">
+
+            <RelativeLayout style="@style/loginParent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:baselineAligned="false"
+                    android:weightSum="1">
+
+                    <FrameLayout
+                        style="@style/parent"
+                        android:layout_gravity="center|bottom"
+                        android:layout_weight="0.25"
+                        android:background="@drawable/login_shape_bk"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            style="@style/parent"
+                            android:background="@drawable/ic_login_bk"
+                            android:contentDescription="Login Background" />
+
+                        <ToggleButton
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:id="@+id/btn_logout"
+                            android:background="@drawable/ic_logout"
+                            android:backgroundTint="@android:color/white"
+                            android:textOn=" "
+                            android:textOff=" "
+                            android:layout_gravity="end"
+                            android:layout_margin="10dp"
+                            android:onClick="onClickFunction"/>
+                    </FrameLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="30dp"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        style="@style/loginCard"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginBottom="@dimen/signup_text_margin_top"
+                        android:background="@android:color/white"
+                        android:elevation="5dp"
+                        android:padding="8dp"
+                        app:cardCornerRadius="@dimen/loginCardRadius">
+
+                        <LinearLayout
+                            style="@style/linearParent"
+                            android:layout_gravity="center"
+                            android:padding="@dimen/loginViewsMargin">
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    style="@style/headerTextPrimary"
+                                    android:layout_gravity="center"
+                                    android:text="Welcome" />
+                            </FrameLayout>
+
+                            <TextView
+                                android:id="@+id/txt_profile_name"
+                                style="@style/headerTextPrimary"
+                                android:text="Name" />
+
+                            <ImageView
+                                android:id="@+id/img_homeImage"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="4dp"
+                                android:contentDescription="Landing Page Image"
+                                android:src="@drawable/pict_splash_screen_img" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/inputLayoutBox"
+                                android:layout_marginTop="@dimen/loginViewsMargin"
+                                app:hintTextAppearance="@style/inputLayoutBoxHint">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/inp_profile_firstName"
+                                    style="@style/modifiedEditText"
+                                    android:hint="First Name"
+                                    android:inputType="textPersonName"
+                                    android:maxLines="1"
+                                    android:textCursorDrawable="@drawable/cursor_color" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/inputLayoutBox"
+                                android:layout_marginTop="@dimen/loginViewsMargin"
+                                app:hintTextAppearance="@style/inputLayoutBoxHint">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/inp_profile_lastName"
+                                    style="@style/modifiedEditText"
+                                    android:hint="Last Name"
+                                    android:inputType="textPersonName"
+                                    android:maxLines="1"
+                                    android:textCursorDrawable="@drawable/cursor_color" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/inputLayoutBox"
+                                android:layout_marginTop="@dimen/loginViewsMargin"
+                                app:hintTextAppearance="@style/inputLayoutBoxHint">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/inp_profile_mobileNumber"
+                                    style="@style/modifiedEditText"
+                                    android:hint="Mobile Number"
+                                    android:inputType="phone"
+                                    android:maxLines="1"
+                                    android:textCursorDrawable="@drawable/cursor_color" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/inputLayoutBox"
+                                android:layout_marginTop="@dimen/loginViewsMargin"
+                                app:hintTextAppearance="@style/inputLayoutBoxHint">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/inp_profile_email"
+                                    style="@style/modifiedEditText"
+                                    android:hint="Email"
+                                    android:inputType="textEmailAddress"
+                                    android:maxLines="1"
+                                    android:textCursorDrawable="@drawable/cursor_color" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/inputLayoutBox"
+                                android:layout_marginTop="@dimen/loginViewsMargin"
+                                app:hintTextAppearance="@style/inputLayoutBoxHint"
+                                app:passwordToggleEnabled="true">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/inp_profile_password"
+                                    style="@style/modifiedEditText"
+                                    android:hint="Password"
+                                    android:inputType="textPassword"
+                                    android:maxLines="1"
+                                    android:textCursorDrawable="@drawable/cursor_color" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/til_profile_repassword"
+                                style="@style/inputLayoutBox"
+                                android:layout_marginTop="@dimen/loginViewsMargin"
+                                android:visibility="gone"
+                                app:hintTextAppearance="@style/inputLayoutBoxHint">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/inp_profile_repassword"
+                                    style="@style/modifiedEditText"
+                                    android:hint="Re-Password"
+                                    android:inputType="textPassword"
+                                    android:maxLines="1"
+                                    android:textCursorDrawable="@drawable/cursor_color" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <Button
+                                style="@style/loginButton"
+                                android:id="@+id/btn_profile_save"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/loginViewsMargin"
+                                android:onClick="onClickFunction"
+                                android:text="Save" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+</FrameLayout>
